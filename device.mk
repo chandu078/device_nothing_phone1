@@ -297,6 +297,9 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libstagefrighthw
 
+# Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Overlay LAHAINA
 PRODUCT_PACKAGES += \
     LAHAINAFrameworks \
