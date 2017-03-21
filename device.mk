@@ -312,7 +312,8 @@ PRODUCT_PACKAGES += \
     NTCarrierConfig \
     NTFrameworks \
     NTSettings \
-    NTSystemUI
+    NTSystemUI \
+    NTWifi
 
 # Overlay QSSI
 PRODUCT_PACKAGES += \
