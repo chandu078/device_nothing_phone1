@@ -87,6 +87,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
+# Hacks
+BUILD_BROKEN_DUP_RULES := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
