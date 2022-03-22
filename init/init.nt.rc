@@ -20,5 +20,5 @@ on early-boot
 
 on boot
     # Gestures
-    chown system system /sys/class/spi_master/spi0/spi0.0/fts_gesture_fod__mode
+    chown system system /sys/class/spi_master/spi0/spi0.0/fts_gestures
     chown system system /sys/class/spi_master/spi0/spi0.0/fts_gesture_fod_pressed
