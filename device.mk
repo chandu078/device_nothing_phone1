@@ -302,6 +302,13 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libstagefrighthw
 
+# Overlay QSSI
+PRODUCT_PACKAGES += \
+    QSSIFrameworks \
+    QSSISystemUI \
+    QSSITelephony \
+    QSSIWifi
+
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
