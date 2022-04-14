@@ -302,6 +302,11 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libstagefrighthw
 
+# Overlay LAHAINA
+PRODUCT_PACKAGES += \
+    LAHAINAFrameworks \
+    LAHAINAWifi
+
 # Overlay QSSI
 PRODUCT_PACKAGES += \
     QSSIFrameworks \
