@@ -59,7 +59,6 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 SOONG_CONFIG_NAMESPACES += androidBluetoothVars
 SOONG_CONFIG_androidBluetoothVars += \
     le_disable_read_buffer_size_and_set_host
