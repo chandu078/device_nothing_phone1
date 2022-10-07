@@ -60,6 +60,10 @@ BOARD_USES_ALSA_AUDIO := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
+SOONG_CONFIG_NAMESPACES += androidBluetoothVars
+SOONG_CONFIG_androidBluetoothVars += \
+    le_disable_read_buffer_size_and_set_host
+SOONG_CONFIG_androidBluetoothVars_le_disable_read_buffer_size_and_set_host ?= true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := Spacewar
