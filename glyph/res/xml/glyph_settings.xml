@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/glyph_title">
+
+    <com.android.settingslib.widget.MainSwitchPreference
+        android:defaultValue="true"
+        android:key="glyph_enable"
+        android:title="@string/glyph_enable" />
+
+    <SeekBarPreference
+        android:key="glyph_brightness"
+        android:title="@string/glyph_brightness_title"
+        android:max="4095"
+        android:defaultValue="1365" />
+
+    <PreferenceCategory
+        android:key="glyph_charging"
+        android:title="@string/glyph_charging_title">
+
+        <SwitchPreference
+            android:key="glyph_charging_meter"
+            android:defaultValue="false"
+            android:title="@string/glyph_charging_meter_enable_title"
+            android:summary="@string/glyph_charging_meter_summary" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
