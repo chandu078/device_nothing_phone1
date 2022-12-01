@@ -1,6 +1,5 @@
 adsp_loader_dlkm.ko
 apr_dlkm.ko
-aw8697.ko
 bolero_cdc_dlkm.ko
 bt_fm_slim.ko
 btpower.ko
@@ -10,6 +9,8 @@ fc0011.ko
 fc0012.ko
 fc0013.ko
 fc2580.ko
+fts_tp.ko
+goodix_fp.ko
 hdmi_dlkm.ko
 hid-aksys.ko
 it913x.ko
@@ -48,7 +49,6 @@ rmnet_core.ko
 rmnet_ctl.ko
 rmnet_offload.ko
 rmnet_shs.ko
-rt_info.ko
 rx_macro_dlkm.ko
 si2157.ko
 slimbus.ko
@@ -65,6 +65,7 @@ tda18250.ko
 tda9887.ko
 tea5761.ko
 tea5767.ko
+tfa98xx_dlkm.ko
 tua9001.ko
 tuner-simple.ko
 tuner-types.ko
