@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+DEVICE_PATH := device/nothing/phone1
+
 # A/B
 AB_OTA_UPDATER := true
 
@@ -72,6 +74,9 @@ BOARD_RAMDISK_USE_LZ4 := true
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_SOURCE := kernel/nothing/sm7325
 TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig
+
+# Kernel modules
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
