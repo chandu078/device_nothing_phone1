@@ -86,6 +86,7 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
+    androidboot.selinux=permissive \
     androidboot.usbcontroller=a600000.dwc3 \
     cgroup.memory=nokmem,nosocket \
     loop.max_part=7 \
