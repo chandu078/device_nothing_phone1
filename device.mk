@@ -307,6 +307,13 @@ PRODUCT_PACKAGES += \
     LAHAINAFrameworks \
     LAHAINAWifi
 
+# Overlay NT
+PRODUCT_PACKAGES += \
+    NTCarrierConfig \
+    NTFrameworks \
+    NTSettings \
+    NTSystemUI
+
 # Overlay QSSI
 PRODUCT_PACKAGES += \
     QSSIFrameworks \
