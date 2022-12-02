@@ -235,6 +235,18 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.default \
+    fstab.default.vendor_ramdisk \
+    init.class_main.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.rc \
+    init.qcom.recovery.rc \
+    init.qcom.sh \
+    init.target.rc \
+    ueventd.qcom.rc
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
