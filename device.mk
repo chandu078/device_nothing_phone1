@@ -311,6 +311,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NTCarrierConfig \
     NTFrameworks \
+    NTSettingsProvider \
     NTSettings \
     NTSystemUI \
     NTWifi
