@@ -307,6 +307,13 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+# Overlay AOSP
+PRODUCT_PACKAGES += \
+    AOSPFrameworks \
+    AOSPSettingsProvider \
+    AOSPSettings \
+    AOSPSystemUI
+    
 # Overlay LAHAINA
 PRODUCT_PACKAGES += \
     LAHAINAFrameworks \
