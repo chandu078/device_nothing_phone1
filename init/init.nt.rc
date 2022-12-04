@@ -24,3 +24,7 @@ on boot
     chown system system /sys/class/spi_master/spi0/spi0.0/fts_gesture_double_tap_pressed
     chown system system /sys/class/spi_master/spi0/spi0.0/fts_gesture_fod_pressed
     chown system system /sys/class/spi_master/spi0/spi0.0/fts_gesture_single_tap_pressed
+
+on property:sys.boot_completed=1
+    # Health
+    restart health-hal-2-1
