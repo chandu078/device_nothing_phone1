@@ -105,7 +105,6 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
-    androidboot.selinux=permissive \
     androidboot.usbcontroller=a600000.dwc3 \
     cgroup.memory=nokmem,nosocket \
     loop.max_part=7 \
@@ -180,6 +179,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 
 # SELinux
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+include $(DEVICE_PATH)/sepolicy/SEPolicy.mk
 
 # Security
 BOOT_SECURITY_PATCH := 2022-09-01

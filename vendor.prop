@@ -101,9 +101,6 @@ vendor.display.enable_optimize_refresh=1
 # DRM
 drm.service.enabled=true
 
-# Fingerprint
-ro.bootloader.locked=0
-
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
