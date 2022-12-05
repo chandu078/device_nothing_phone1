@@ -19,6 +19,9 @@ on early-boot
     write /sys/bus/msm_subsys/devices/subsys10/restart_level RELATED
 
 on boot
+    # Charging
+    write /sys/class/qcom-battery/slowcharge_en 0
+
     # Display
     chown system system /sys/class/drm/sde-conn-1-DSI-1/panel_id
 
