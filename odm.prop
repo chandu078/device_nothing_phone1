@@ -5,6 +5,7 @@ persist.vendor.audio.speaker.prot.enable=false
 persist.vendor.audio.vbat.enabled=false
 persist.vendor.audio.voicecall.speaker.stereo=true
 vendor.audio.spkr_prot.tx.sampling_rate=48000
+ro.config.vc_call_vol_steps=7
 ro.vendor.qti.va_odm.support=1
 
 # Bluetooth
