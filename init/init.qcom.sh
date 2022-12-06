@@ -450,6 +450,13 @@ fi
 chmod g-w /data/vendor/modem_config
 setprop ro.vendor.ril.mbn_copy_completed 1
 
+#add permission for block_size, mem_type, mem_size nodes to collect diag over QDSS by ODL
+#application by "oem_2902" group
+if [ -e  /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/block_size ]
+then
+    chown -h root.oem_2902 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/block_size
+    chmod 660 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/block_size
+fi
 #check build variant for printk logging
 #current default minimum boot-time-default
 buildvariant=`getprop ro.build.type`
@@ -463,3 +470,35 @@ case "$buildvariant" in
         echo "4 4 1 4" > /proc/sys/kernel/printk
         ;;
 esac
+
+#lei.wang add for ABR-4885 to setprop hwid_version
+if [ -f /proc/hwid ]; then
+    hwid=`cat /proc/hwid`
+    case "$hwid" in
+                       "T0")
+                                    setprop persist.vendor.fastrpc.hwid_version T0
+                                    ;;
+                       "EVT")
+                                    setprop persist.vendor.fastrpc.hwid_version EVT
+                                    ;;
+                       "DVT")
+                                    setprop persist.vendor.fastrpc.hwid_version DVT
+                                    ;;
+                       "PVT")
+                                    setprop persist.vendor.fastrpc.hwid_version PVT
+                                    ;;
+    esac
+fi
+
+#wang.ya add for ABR-7525 to setprop efuse
+if [ -f /proc/secure_state ]; then
+    efuse=`cat /proc/secure_state`
+    case "$efuse" in
+                       "0")
+                                    setprop vendor.fastrpc.efuse.state 0
+                                    ;;
+                       "1")
+                                    setprop vendor.fastrpc.efuse.state 1
+                                    ;;
+    esac
+fi
