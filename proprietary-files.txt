@@ -370,10 +370,15 @@ vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
+vendor/lib64/libdepthcomputation.so
+vendor/lib64/libhdr_stub.so
+vendor/lib64/libhdrdynamic.so
+vendor/lib64/libhdrdynamicootf.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libipebpsstriping170.so
 vendor/lib64/libjpege.so
 vendor/lib64/libmctfengine_stub.so
+vendor/lib64/libmfec.so
 vendor/lib64/libmmcamera_bestats.so
 vendor/lib64/libmmcamera_cac3.so
 vendor/lib64/libmmcamera_faceproc.so
@@ -395,11 +400,15 @@ vendor/lib64/libqllengine.so
 vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libremosaiclib.so
 vendor/lib64/librmsclib1.so
+vendor/lib64/libspectre.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libsynx.so
 vendor/lib64/libtfestriping.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libvidhance.so
+vendor/lib64/libvidhance_active_ois.so
+vendor/lib64/libvidhance_stabilizer.so
+vendor/lib64/libvidhance_stabilizer_g4.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 # Camera firmware
