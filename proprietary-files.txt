@@ -77,6 +77,19 @@ vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so
 # ANT+
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
+# Audio
+vendor/lib/hw/audio.primary.lahaina.so
+vendor/lib/lib_lvacfs.so
+vendor/lib/liba2dpoffload.so
+vendor/lib/liblvacfs_wrapper.so
+vendor/lib/libssrec.so
+vendor/lib/libsurround_3mic_proc.so
+vendor/lib64/hw/audio.primary.lahaina.so
+vendor/lib64/lib_lvacfs.so
+vendor/lib64/liba2dpoffload.so
+vendor/lib64/liblvacfs_wrapper.so
+vendor/lib64/libssrec.so
+
 # Audio libraries
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libqcbassboost.so
@@ -142,7 +155,6 @@ vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt
 vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam_back.txt
 vendor/etc/lvacfs_params/4mic/audiozoom_13.txt
 vendor/etc/lvacfs_params/4mic/audiozoom_4.txt
-vendor/lib/libsurround_3mic_proc.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti

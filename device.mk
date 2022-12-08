@@ -44,11 +44,9 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.soundtrigger@2.3-impl \
     audio.bluetooth.default \
-    audio.primary.lahaina \
     audio.r_submix.default \
     audio.usb.default \
     audioadsprpcd \
-    liba2dpoffload \
     libbatterylistener \
     libcomprcapture \
     libexthwplugin \
@@ -59,7 +57,6 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libsndmonitor \
     libspkrprot \
-    libssrec \
     libvolumelistener \
     sound_trigger.primary.lahaina:32
 
