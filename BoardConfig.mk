@@ -182,7 +182,7 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 include $(DEVICE_PATH)/sepolicy/SEPolicy.mk
 
 # Security
-BOOT_SECURITY_PATCH := 2022-09-01
+BOOT_SECURITY_PATCH := 2022-11-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # WiFi

@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
-## from Nothing phone (1) (1.1.6).
+## from Nothing phone (1) (1.1.7).
 
 # ACDBs
 vendor/etc/acdbdata/QRD/lahaina-yupikqrd-snd-card/QRD_Yupik_Bluetooth_cal.acdb
