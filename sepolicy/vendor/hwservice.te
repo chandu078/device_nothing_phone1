@@ -1,0 +1,2 @@
+# Diag
+type hal_diag_hwservice, hwservice_manager_type;

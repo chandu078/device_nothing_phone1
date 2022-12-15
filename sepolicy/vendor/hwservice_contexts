@@ -1,3 +1,6 @@
+# Diag
+vendor.qti.diaghal::Idiag                                                   u:object_r:hal_diag_hwservice:s0
+
 # Fingerprint
 vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon     u:object_r:hal_fingerprint_hwservice:s0
 
