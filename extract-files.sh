@@ -58,6 +58,9 @@ function blob_fixup() {
         system_ext/lib64/libwfdnative.so)
             sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
             ;;
+        vendor/etc/init/netmgrd.rc)
+            sed -i "/modprobe/d" "${2}"
+            ;;
         vendor/lib64/libgf_hal.so)
             sed -i "s|ro.boot.flash.locked|ro.bootloader.locked|g" "${2}"
             ;;
