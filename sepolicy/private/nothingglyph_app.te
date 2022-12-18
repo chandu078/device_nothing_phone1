@@ -5,6 +5,7 @@ app_domain(nothingglyph_app)
 
 allow nothingglyph_app {
   activity_service
+  activity_task_service
   audio_service
   autofill_service
   batteryproperties_service
@@ -15,6 +16,7 @@ allow nothingglyph_app {
   hint_service
   netstats_service
   surfaceflinger_service
+  vibrator_manager_service
 }:service_manager find;
 
 allow nothingglyph_app system_app_data_file:dir create_dir_perms;
@@ -25,3 +27,5 @@ allow nothingglyph_app system_app_data_file:{
 
 allow nothingglyph_app sysfs_leds:dir r_dir_perms;
 allow nothingglyph_app sysfs_leds:file rw_file_perms;
+
+dontaudit nothingglyph_app default_prop:file read;
