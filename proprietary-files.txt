@@ -29,11 +29,13 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 # ADSP
 vendor/bin/adsprpcd
 vendor/bin/dspservice
+vendor/bin/loadalgo
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libloadalgo_stub.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # ADSP modules
@@ -84,13 +86,9 @@ vendor/lib/liba2dpoffload.so
 vendor/lib/liblvacfs_wrapper.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
-vendor/lib64/hw/audio.primary.lahaina.so
-vendor/lib64/lib_lvacfs.so
-vendor/lib64/liba2dpoffload.so
-vendor/lib64/liblvacfs_wrapper.so
-vendor/lib64/libssrec.so
 
 # Audio libraries
+vendor/bin/audioflacapp
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
@@ -101,18 +99,23 @@ vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
+vendor/lib/libadpcmdec.so
 vendor/lib/libadsprpc.so
 vendor/lib/libaudcal.so
 vendor/lib/libaudio_log_utils.so
+vendor/lib/libaudioalsa.so
+vendor/lib/libaudioconfigstore.so
 vendor/lib/libaudioparsers.so
 vendor/lib/libhdmipassthru.so
 vendor/lib/libqtigef.so
+vendor/lib/libsmwrapper.so
+vendor/lib/libstagefright_soft_qtiflacdec.so
 vendor/lib64/libadsprpc.so
 
 # Audio firmware
 vendor/firmware/tfa98xx.cnt
 
-# Audio lvimfs params
+# Audio lvacfs params
 vendor/etc/lvacfs_params/1mic/LVACFS_Calibration360.dat
 vendor/etc/lvacfs_params/1mic/LVACFS_Configuration.txt
 vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt
@@ -440,6 +443,7 @@ vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
+vendor/lib64/libsysmon_cdsp_skel.so
 
 # Charger
 vendor/bin/hvdcp_opti
@@ -575,18 +579,13 @@ vendor/firmware/evass.mdt
 system/etc/permissions/se.dirac.acs.xml
 system/priv-app/DiracAudioControlService/DiracAudioControlService.apk
 system/system/priv-app/NothingDiracService/NothingDiracService.apk
-system_ext/etc/permissions/audiosphere.xml
-system_ext/framework/audiosphere.jar
-vendor/bin/audioflacapp
 vendor/etc/dirac/interfacedb
 vendor/etc/diracmobile.config
 vendor/etc/diracvdd.bin
 vendor/lib/soundfx/libdiraceffect.so
 vendor/lib/libDiracAPI_SHARED.so
-vendor/lib/libaudioalsa.so
 vendor/lib/libdiracapwrapper.so
 vendor/lib/libdrc.so
-vendor/lib/libstagefright_soft_qtiflacdec.so
 
 # Diag
 system_ext/lib/vendor.qti.diaghal@1.0.so
@@ -957,9 +956,8 @@ vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
 # Kernel
-vendor/bin/init.kernel.post_boot-lahaina.sh
-vendor/bin/init.kernel.post_boot.sh
 vendor/bin/init.kernel.post_boot-yupik.sh
+vendor/bin/init.kernel.post_boot.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/vendor_modprobe.sh
 vendor/etc/init/hw/init.qti.kernel.rc
@@ -982,6 +980,8 @@ vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
+vendor/lib/vendor.qti.voiceprint@1.0.so
+vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Media
 system_ext/lib/libmmosal.so
@@ -1489,7 +1489,7 @@ vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Snapdragon Computer Vision Engine
 vendor/lib/libfastcvdsp_stub.so
--vendor/lib/libfastcvopt.so
+vendor/lib/libfastcvopt.so
 vendor/lib/libscveCommon.so
 vendor/lib/libscveCommon_stub.so
 vendor/lib/libscveObjectSegmentation.so
@@ -1497,7 +1497,7 @@ vendor/lib/libscveObjectSegmentation_stub.so
 vendor/lib/libscveObjectTracker.so
 vendor/lib/libscveObjectTracker_stub.so
 vendor/lib64/libfastcvdsp_stub.so
--vendor/lib64/libfastcvopt.so
+vendor/lib64/libfastcvopt.so
 vendor/lib64/libscveCommon.so
 vendor/lib64/libscveCommon_stub.so
 vendor/lib64/libscveObjectSegmentation.so
@@ -1515,8 +1515,8 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
 vendor/etc/thermal-engine.conf
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
+vendor/lib/libthermalclient.so
+vendor/lib64/libthermalclient.so
 
 # Time services
 vendor/app/TimeService/TimeService.apk
