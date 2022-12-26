@@ -42,9 +42,12 @@ persist.mm.enable.prefetch=true
 persist.data.df.agg.dl_pkt=10
 persist.data.df.agg.dl_size=4096
 persist.vendor.data.mode=concurrent
+ro.vendor.use_data_netmgrd=true
 
 # Radio
 ril.subscription.types=NV,RUIM
+ro.telephony.sim_slots.count=2
+telephony.active_modems.max_count=2
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true

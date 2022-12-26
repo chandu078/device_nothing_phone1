@@ -16,7 +16,7 @@ vendor.audio.feature.compress_meta_data.enable=true
 vendor.audio.feature.concurrent_capture.enable=true
 vendor.audio.feature.custom_stereo.enable=true
 vendor.audio.feature.display_port.enable=true
-vendor.audio.feature.dynamic_ecns.enable=true
+vendor.audio.feature.dynamic_ecns.enable=false
 vendor.audio.feature.fluence.enable=true
 vendor.audio.feature.fm.enable=true
 vendor.audio.feature.hdmi_edid.enable=true
@@ -34,7 +34,7 @@ vendor.audio.feature.src_trkn.enable=true
 vendor.audio.feature.ssrec.enable=true
 vendor.audio.feature.usb_offload.enable=true
 vendor.audio.feature.usb_offload_burst_mode.enable=true
-vendor.audio.feature.vbat.enable=true
+vendor.audio.feature.vbat.enable=false
 vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.hal.boot.timeout.ms=20000
 vendor.audio.hal.output.suspend.supported=true
@@ -134,6 +134,11 @@ ro.surface_flinger.set_touch_timer_ms=4000
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
 
 # Incremental FS
 ro.incremental.enable=yes
